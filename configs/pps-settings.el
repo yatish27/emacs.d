@@ -1,6 +1,5 @@
 ;; Themes
 (load-theme 'monokai t)
-
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
@@ -19,5 +18,16 @@
 
 ;; stop creating ~ files
 (setq make-backup-files nil)
+
+(require 'maxframe)
+(add-hook 'window-setup-hook 'maximize-frame t)
+
+;; switch between windows
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
+;; project explorer
+(require 'dirtree)
 
 (provide 'pps-settings)

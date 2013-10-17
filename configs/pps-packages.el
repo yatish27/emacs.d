@@ -26,6 +26,7 @@
                       undo-tree
                       yasnippet
 		      octomacs
+		      maxframe
 
                       ;; utils
                       magit
