@@ -6,10 +6,9 @@
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 
 (require 'rvm)
-(rvm-use-default)
-
-(add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
-
+;;(rvm-use-default)
+(add-hook 'ruby-mode-hook
+          (lambda () (rvm-activate-corresponding-ruby)))
 ;; Ruby mode hook
 (eval-after-load 'ruby-mode
   '(progn
