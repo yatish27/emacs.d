@@ -1,24 +1,25 @@
 ;; init.el
-
+;; load and install require packages
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+(require 'pallet)
 ;; configure load path
 (setq load-path (cons "~/.emacs.d" load-path))
 (setq root-dir "~/.emacs.d")
 (setq configs-dir (concat root-dir "/configs"))
-(setq hooks-dir (concat root-dir "/hooks"))
+;; give names
 (setq logs-dir (concat root-dir "/logs"))
 (setq vendor-dir (concat root-dir "/vendor"))
 
 ;; Load configs
 (add-to-list 'load-path configs-dir)
-(add-to-list 'load-path hooks-dir)
 (add-to-list 'load-path vendor-dir)
 
-
-(require 'pps-packages)
+;; add *.el as per custom requirements
 (require 'pps-settings)
+(load "ruby.el")
+(load "yaml.el")
 
-;; Load all hooks
-(mapcar 'load (directory-files hooks-dir t "\\.el\\'"))
 
 
 
