@@ -19,6 +19,7 @@
 (require 'pps-settings)
 (load "ruby.el")
 (load "yaml.el")
+(load "markdown.el")
 
 
 

@@ -6,7 +6,7 @@
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 
 (require 'rvm)
-;;(rvm-use-default)
+(rvm-use-default)
 (add-hook 'ruby-mode-hook
           (lambda () (rvm-activate-corresponding-ruby)))
 ;; Ruby mode hook

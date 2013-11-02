@@ -1,6 +1,6 @@
 ;; Glabal settings
 ;; Themes
-(load-theme 'monokai t)
+(load-theme 'cyberpunk t)
 
 (require 'auto-complete)
 (global-auto-complete-mode t)
@@ -8,10 +8,17 @@
 (require 'textmate)
 (textmate-mode)
 
+(require 'rvm)
+(rvm-use-default)
+
+(require 'yasnippet)
+(yas-global-mode 1)
+
+
 
 (require 'auto-complete-config)
- (add-to-list 'ac-dictionary-directories
-	      "~/.emacs.d/.cask/24.3.50.1/elpa/auto-complete-20130724.1750/dict")
+;;(add-to-list 'ac-dictionary-directories
+;;	      "~/.emacs.d/.cask/24.3.50.1/elpa/auto-complete-20130724.1750/dict")
 (ac-config-default)
 (setq ac-ignore-case nil)
 ;;(add-to-list 'ac-modes 'enh-ruby-mode)
@@ -51,7 +58,6 @@
 
 ;; Project Explorer(vendor)
 (require 'dirtree)
-
 
 ;;Projectile Configs
 (require 'projectile)
