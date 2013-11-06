@@ -34,3 +34,5 @@
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
 (depends-on "markdown-mode")
+(depends-on "dash-at-point")
+(depends-on "feature-mode")

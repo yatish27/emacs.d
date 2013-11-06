@@ -8,7 +8,7 @@
 (require 'rvm)
 (rvm-use-default)
 (add-hook 'ruby-mode-hook
-          (lambda () (rvm-activate-corresponding-ruby)))
+          (lambda () ('rvm-activate-corresponding-ruby)))
 ;; Ruby mode hook
 (eval-after-load 'ruby-mode
   '(progn
@@ -37,3 +37,10 @@
 (define-key ruby-mode-map (kbd "C-x C-t") 'ruby-send-region)
 
 (add-hook 'ruby-mode-hook 'robe-mode)    
+
+(autoload 'dash-at-point "dash-at-point"
+          "Search the word at point with Dash." t nil)
+(global-set-key "\C-cd" 'dash-at-point)
+
+(add-hook 'ruby-mode-hook
+          (lambda () (setq dash-at-point-docset "ruby")))

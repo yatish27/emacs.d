@@ -14,6 +14,8 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
 
 (require 'auto-complete-config)
