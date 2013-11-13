@@ -22,6 +22,7 @@
 (depends-on "multiple-cursors")
 (depends-on "pallet")
 (depends-on "paredit")
+(depends-on "pastebin")
 (depends-on "projectile")
 (depends-on "rcirc")
 (depends-on "rings")
@@ -37,3 +38,4 @@
 (depends-on "undo-tree")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
+(depends-on "pastebin")
