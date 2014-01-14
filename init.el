@@ -14,12 +14,15 @@
 ;; Load configs
 (add-to-list 'load-path configs-dir)
 (add-to-list 'load-path vendor-dir)
-
+(setq default-directory "/Users/yatish")
 ;; add *.el as per custom requirements
 (require 'pps-settings)
 (load "ruby.el")
 (load "yaml.el")
 (load "markdown.el")
+(load "haml.el")
+(load "coffee.el")
+
 
 
 

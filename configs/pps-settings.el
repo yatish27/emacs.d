@@ -17,6 +17,8 @@
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
+(require 'scss-mode)
+(setq scss-indent-offset 2)
 
 (require 'auto-complete-config)
 ;;(add-to-list 'ac-dictionary-directories
