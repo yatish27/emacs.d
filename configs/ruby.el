@@ -44,3 +44,7 @@
 
 (add-hook 'ruby-mode-hook
           (lambda () (setq dash-at-point-docset "ruby")))
+
+(add-hook 'ruby-mode-hook 'zossima-mode)
+
+(require 'rhtml-mode)

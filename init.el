@@ -5,16 +5,16 @@
 (require 'pallet)
 ;; configure load path
 (setq load-path (cons "~/.emacs.d" load-path))
+
 (setq root-dir "~/.emacs.d")
 (setq configs-dir (concat root-dir "/configs"))
-;; give names
 (setq logs-dir (concat root-dir "/logs"))
 (setq vendor-dir (concat root-dir "/vendor"))
+(setq yas-dir (concat root-dir "/plugins/yasnippet"))
 
-;; Load configs
+(add-to-list 'load-path yas-dir)
 (add-to-list 'load-path configs-dir)
 (add-to-list 'load-path vendor-dir)
-(setq default-directory "/Users/yatish")
 ;; add *.el as per custom requirements
 (require 'pps-settings)
 (load "ruby.el")

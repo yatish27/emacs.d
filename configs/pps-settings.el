@@ -1,9 +1,7 @@
 ;; Glabal settings
 ;; Themes
 (load-theme 'cyberpunk t)
-
-(require 'auto-complete)
-(global-auto-complete-mode t)
+(setq default-directory "/Users/yatish")
 
 (require 'textmate)
 (textmate-mode)
@@ -19,11 +17,19 @@
 
 (require 'scss-mode)
 (setq scss-indent-offset 2)
+;;(require 'auto-complete)
+;;(global-auto-complete-mode t)
 
 (require 'auto-complete-config)
-;;(add-to-list 'ac-dictionary-directories
-;;	      "~/.emacs.d/.cask/24.3.50.1/elpa/auto-complete-20130724.1750/dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
+;;; set the trigger key so that it can work together with yasnippet on tab key,
+;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
+;;; activate, otherwise, auto-complete will
+(ac-set-trigger-key "TAB")
+(ac-set-trigger-key "<tab>")
+
+;;(ac-config-default)
 (setq ac-ignore-case nil)
 ;;(add-to-list 'ac-modes 'enh-ruby-mode)
 (add-to-list 'ac-modes 'web-mode)
