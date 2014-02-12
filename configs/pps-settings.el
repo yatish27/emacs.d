@@ -34,6 +34,8 @@
 ;;(add-to-list 'ac-modes 'enh-ruby-mode)
 (add-to-list 'ac-modes 'web-mode)
 
+(require 'tidy)
+
 ;; splash screen
 (setq inhibit-splash-screen t)
 
