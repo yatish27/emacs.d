@@ -37,6 +37,7 @@
 (depends-on "ruby-compilation")
 (depends-on "rvm")
 (depends-on "scss-mode")
+(depends-on "slim-mode")
 (depends-on "smex")
 (depends-on "smooth-scrolling")
 (depends-on "tagedit")
