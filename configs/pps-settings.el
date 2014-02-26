@@ -20,6 +20,8 @@
 ;;(require 'auto-complete)
 ;;(global-auto-complete-mode t)
 
+(custom-set-variables '(coffee-tab-width 2))
+
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
