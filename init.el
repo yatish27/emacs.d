@@ -22,7 +22,7 @@
 (load "markdown.el")
 (load "haml.el")
 (load "coffee.el")
-
+(load "slim.el")
 
 
 
