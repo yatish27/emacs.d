@@ -51,3 +51,4 @@
 (depends-on "undo-tree")
 (depends-on "yaml-mode")
 (depends-on "zossima")
+(depends-on "coffee-mode")
