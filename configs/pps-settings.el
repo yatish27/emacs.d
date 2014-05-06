@@ -1,10 +1,10 @@
 ;; Glabal settings
 ;; Themes
 (load-theme 'cyberpunk t)
-;;Need to Change this for debian 
-(setq default-directory "/home/yatish")
+;;Need to Change this for debian
+(setq default-directory "/Users/yatish")
 
-(set-default-font "monaco 10")
+(set-default-font "monaco 12")
 (require 'textmate)
 (textmate-mode)
 
@@ -53,12 +53,12 @@
 (ido-mode 1)
 (setq ido-show-dot-for-dired t)
 (ido-vertical-mode)
-(require 'smex) 
+(require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands) 
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;;(ido-ubiquitous-mode)
-;;(setq ido-ubiquitous-enable-compatibility nil) 
+;;(setq ido-ubiquitous-enable-compatibility nil)
 
 ;; stop creating ~ files
 (setq make-backup-files nil)
@@ -86,5 +86,7 @@
 (global-set-key (kbd "s-p") 'projectile-find-file)
 ;; Press Command-b for fuzzy switch buffer
 (global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
+
+(require 'emmet-mode)
 
 (provide 'pps-settings)
