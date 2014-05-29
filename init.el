@@ -23,11 +23,4 @@
 (load "haml.el")
 (load "coffee.el")
 (load "slim.el")
-
-
-
-
-
-
-
-
+(load "c.el")
