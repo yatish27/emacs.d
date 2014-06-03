@@ -7,9 +7,6 @@
 (set-default-font "monaco 12")
 (setq default-tab-width 2)
 
-(setq max-lisp-eval-depth 12000)
-(setq max-specpdl-size 120000)
-
 (require 'textmate)
 (textmate-mode)
 
