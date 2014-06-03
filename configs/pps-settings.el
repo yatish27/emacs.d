@@ -5,6 +5,8 @@
 (setq default-directory "/Users/yatish")
 
 (set-default-font "monaco 12")
+(setq default-tab-width 2)
+
 (require 'textmate)
 (textmate-mode)
 
@@ -19,22 +21,16 @@
 
 (require 'scss-mode)
 (setq scss-indent-offset 2)
-;;(require 'auto-complete)
-;;(global-auto-complete-mode t)
 
-(custom-set-variables '(coffee-tab-width 2))
+(require 'auto-complete)
+(global-auto-complete-mode t)
 
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
-(auto-complete-mode 1)
 ;;; set the trigger key so that it can work together with yasnippet on tab key,
 ;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
 ;;; activate, otherwise, auto-complete will
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
 
-;;(ac-config-default)
 (setq ac-ignore-case nil)
 ;;(add-to-list 'ac-modes 'enh-ruby-mode)
 (add-to-list 'ac-modes 'web-mode)
@@ -53,6 +49,7 @@
 (ido-mode 1)
 (setq ido-show-dot-for-dired t)
 (ido-vertical-mode)
+
 (require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
@@ -89,13 +86,4 @@
 
 (require 'emmet-mode)
 
-
-;; seeing-is-believing setup
-(defun seeing-is-believing ()
-  "Replace the current region (or the whole buffer, if none) with the output
-of seeing_is_believing."
-  (interactive)
-  (let ((beg (if (region-active-p) (region-beginning) (point-min)))
-        (end (if (region-active-p) (region-end) (point-max))))
-    (shell-command-on-region beg end "seeing_is_believing" nil 'replace)))
 (provide 'pps-settings)

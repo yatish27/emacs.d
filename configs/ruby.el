@@ -5,10 +5,9 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 
-(require 'rvm)
-(rvm-use-default)
 (add-hook 'ruby-mode-hook
           (lambda () ('rvm-activate-corresponding-ruby)))
+
 ;; Ruby mode hook
 (eval-after-load 'ruby-mode
   '(progn
@@ -39,7 +38,7 @@
 (add-hook 'ruby-mode-hook 'robe-mode)    
 
 (autoload 'dash-at-point "dash-at-point"
-          "Search the word at point with Dash." t nil)
+	"Search the word at point with Dash." t nil)
 (global-set-key "\C-cd" 'dash-at-point)
 
 (add-hook 'ruby-mode-hook
@@ -48,3 +47,14 @@
 (add-hook 'ruby-mode-hook 'zossima-mode)
 
 (require 'rhtml-mode)
+
+
+;; seeing-is-believing setup
+(defun seeing-is-believing ()
+  "Replace the current region (or the whole buffer, if none) with the output
+of seeing_is_believing."
+  (interactive)
+  (let ((beg (if (region-active-p) (region-beginning) (point-min)))
+        (end (if (region-active-p) (region-end) (point-max))))
+    (shell-command-on-region beg end "seeing_is_believing" nil 'replace)))
+

@@ -5,7 +5,9 @@
 
 (defun coffee-custom ()
   "coffee-mode-hook"
- (set (make-local-variable 'tab-width) 2))
+	(set (make-local-variable 'tab-width) 2))
 
 (add-hook 'coffee-mode-hook
   '(lambda() (coffee-custom)))
+
+(custom-set-variables '(coffee-tab-width 2))

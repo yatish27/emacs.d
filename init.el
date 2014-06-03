@@ -17,6 +17,7 @@
 (add-to-list 'load-path vendor-dir)
 ;; add *.el as per custom requirements
 (require 'pps-settings)
+
 (load "ruby.el")
 (load "yaml.el")
 (load "markdown.el")
