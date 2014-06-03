@@ -14,6 +14,7 @@
 (depends-on "dash-at-point")
 (depends-on "elpy")
 (depends-on "emmet-mode")
+(depends-on "enh-ruby-mode")
 (depends-on "feature-mode")
 (depends-on "flymake-haml")
 (depends-on "flymake-ruby")

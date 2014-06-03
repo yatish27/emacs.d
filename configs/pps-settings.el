@@ -7,6 +7,9 @@
 (set-default-font "monaco 12")
 (setq default-tab-width 2)
 
+(setq max-lisp-eval-depth 12000)
+(setq max-specpdl-size 120000)
+
 (require 'textmate)
 (textmate-mode)
 
@@ -31,12 +34,16 @@
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
 
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories
+						 "~/.emacs.d/.cask/24.3.1/elpa/auto-complete-20131121.1705/dict")
+(ac-config-default)
 (setq ac-ignore-case nil)
-;;(add-to-list 'ac-modes 'enh-ruby-mode)
 (add-to-list 'ac-modes 'web-mode)
 
 (require 'tidy)
 
+(require 'ag)
 ;; splash screen
 (setq inhibit-splash-screen t)
 
